@@ -13,13 +13,7 @@ body {
     font-family: 'Barlow Semi Condensed', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 13px;
     background-color: var(--light-gray);
-    color: var(--light-gray);
     margin: 4rem 1.5rem;
-}
-
-.container {
-    display: grid;
-    gap: 1rem;
 }
 
 .card {
@@ -85,19 +79,88 @@ p {
 /* colors */
 .violet {
     background-color: var(--violet);
+    color: var(--white);
+
 }
 
 .grey-blue {
     background-color: var(--dark-grey-blue);
+    color: var(--white);
+
+
 }
 
 .white {
     background-color: var(--white);
+    color: var(--dark-black-blue);
 }
 
 .black-blue {
     background-color: var(--dark-black-blue);
+    color: var(--light-gray);
+
 }
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
+
+@media all and (min-width: 900px) {
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-areas: 'cards long';
+        gap: 1.8rem;   
+        max-width: 70rem;
+        min-width: calc(100% - 40rem);              
+        margin: 2rem;
+    }
+
+    .card:nth-child(1) {
+        grid-column: 1 / 3;
+    }
+    
+    .card:nth-child(2) {
+        grid-column: 3 / 4 ;
+    }
+
+    .card:nth-child(3) {
+        grid-area: 2 / 1 / 3 / 2 ;
+    }
+
+    .card:nth-child(4) {
+        grid-area: 2 / 2 / 3 / 4;
+    }
+
+    .card:nth-child(5) {
+        grid-area: 1 / 4 / 3 / 5;
+    }
+
+    .card {
+        margin: 0;
+        order: 1;
+    }
+
+    .card img {
+        margin-right: 3rem;
+    }
+
+    .profile img {
+        position: absolute;
+        margin-right: 0;
+        align-items: center;
+    }
+
+    .profile-text {
+        margin-left: 3.5rem;
+
+    }
+}
