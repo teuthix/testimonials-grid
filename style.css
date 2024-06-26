@@ -17,7 +17,7 @@ body {
 }
 
 h1 {
-    display: none;
+    color: var(--light-grey-blue);
 }
 
 .card {
