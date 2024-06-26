@@ -55,7 +55,6 @@ body {
 
 .grad {
     opacity: .5;
-
 }
 
 .review {
@@ -86,8 +85,6 @@ p {
 .grey-blue {
     background-color: var(--dark-grey-blue);
     color: var(--white);
-
-
 }
 
 .white {
@@ -98,7 +95,6 @@ p {
 .black-blue {
     background-color: var(--dark-black-blue);
     color: var(--light-gray);
-
 }
 
 .attribution { font-size: 11px; text-align: center; }
@@ -124,6 +120,26 @@ p {
         margin: 2rem;
     }
 
+    .card {
+        margin: 0;
+    }
+
+    .card img {
+        margin-right: 3rem;
+    }
+
+    .profile img {
+        position: absolute;
+        margin-right: 0;
+        align-items: center;
+    }
+
+    .profile-text {
+        margin-left: 3.5rem;
+    }
+
+    /* card positions */
+
     .card:nth-child(1) {
         grid-column: 1 / 3;
     }
@@ -144,23 +160,4 @@ p {
         grid-area: 1 / 4 / 3 / 5;
     }
 
-    .card {
-        margin: 0;
-        order: 1;
-    }
-
-    .card img {
-        margin-right: 3rem;
-    }
-
-    .profile img {
-        position: absolute;
-        margin-right: 0;
-        align-items: center;
-    }
-
-    .profile-text {
-        margin-left: 3.5rem;
-
-    }
 }
